@@ -1,1 +1,435 @@
-alifweb
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MyWeb | Cerita Perjalanan Saya</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #080d18;
+  color: #f1f5f9;
+  line-height: 1.8;
+}
+
+header {
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: #101827;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #26354b;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #60a5fa;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+.hero {
+  min-height: 85vh;
+  padding: 90px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at top right,
+    #1e3a5f, transparent 60%),
+    #080d18;
+}
+
+.tag {
+  color: #60a5fa;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.2;
+  max-width: 800px;
+  margin-bottom: 22px;
+}
+
+h1 span {
+  color: #60a5fa;
+}
+
+.hero p {
+  max-width: 620px;
+  color: #b6c3d6;
+}
+
+.button {
+  display: inline-block;
+  width: fit-content;
+  padding: 12px 23px;
+  background: #2563eb;
+  color: white;
+  border-radius: 9px;
+  text-decoration: none;
+  margin-top: 28px;
+}
+
+.button:hover {
+  background: #3b82f6;
+}
+
+section {
+  padding: 75px 8%;
+}
+
+.section-tag {
+  color: #60a5fa;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: clamp(27px, 4vw, 38px);
+  margin-bottom: 16px;
+}
+
+.intro {
+  color: #aab7ca;
+  max-width: 700px;
+  margin-bottom: 35px;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.story {
+  overflow: hidden;
+  background: #111b2b;
+  border: 1px solid #27364a;
+  border-radius: 16px;
+  transition: transform 0.25s;
+}
+
+.story:hover {
+  transform: translateY(-5px);
+}
+
+.story img {
+  display: block;
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+}
+
+.story-content {
+  padding: 22px;
+}
+
+.number {
+  color: #60a5fa;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.story h3 {
+  font-size: 21px;
+  margin: 8px 0 10px;
+}
+
+.story p {
+  color: #b2bfd1;
+  font-size: 14px;
+}
+
+.quote {
+  background: #111b2b;
+  border-left: 4px solid #60a5fa;
+  border-radius: 8px;
+  padding: 28px;
+  margin-top: 35px;
+  color: #dbeafe;
+  font-size: 18px;
+}
+
+.closing {
+  text-align: center;
+  background:
+    radial-gradient(ellipse at center,
+    #172d4b, #080d18 70%);
+}
+
+.closing p {
+  color: #b6c3d6;
+  max-width: 650px;
+  margin: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #94a3b8;
+  border-top: 1px solid #26354b;
+  font-size: 13px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 16px 5%;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  section {
+    padding: 55px 5%;
+  }
+
+  .hero {
+    padding: 75px 6%;
+  }
+
+  .story img {
+    height: 280px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">MyWeb.</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#cerita">Cerita Saya</a>
+    <a href="#pesan">Penutup</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="tag">MY LIFE • MY STORY</div>
+
+  <h1>
+    Setiap Foto Punya
+    <span>Cerita.</span>
+  </h1>
+
+  <p>
+    Selamat datang di dunia kecil saya.
+    Di sini, saya menyimpan momen bersama keluarga,
+    perjalanan, persahabatan, dan pengalaman
+    sederhana yang membuat hidup lebih berwarna.
+  </p>
+
+  <a class="button" href="#cerita">
+    Jelajahi Cerita Saya ↓
+  </a>
+</section>
+
+<section id="cerita">
+  <div class="section-tag">KOLEKSI KENANGAN</div>
+
+  <h2>Potongan Cerita Kehidupan</h2>
+
+  <p class="intro">
+    Hidup bukan hanya tentang seberapa jauh kita pergi,
+    tetapi juga tentang siapa yang menemani perjalanan
+    dan kenangan apa yang kita bawa pulang.
+  </p>
+
+  <div class="story-grid">
+
+    <article class="story">
+      <img
+        src="1000239031.jpg"
+        alt="Momen bersama keluarga di restoran"
+        loading="lazy"
+      >
+
+      <div class="story-content">
+        <div class="number">01 / KELUARGA</div>
+
+        <h3>Tempat Pulang Bernama Keluarga</h3>
+
+        <p>
+          Di tengah kesibukan hidup, ada momen sederhana
+          yang selalu terasa istimewa: duduk bersama
+          keluarga, berbagi cerita, dan menikmati waktu
+          tanpa harus memikirkan banyak hal.
+          Dari mereka saya belajar bahwa kebahagiaan
+          tidak selalu membutuhkan sesuatu yang mewah.
+        </p>
+      </div>
+    </article>
+
+    <article class="story">
+      <img
+        src="1000238955.jpg"
+        alt="Menikmati pemandangan kota dari jendela"
+        loading="lazy"
+      >
+
+      <div class="story-content">
+        <div class="number">02 / REFLEKSI</div>
+
+        <h3>Melihat Dunia dari Sudut Berbeda</h3>
+
+        <p>
+          Terkadang, berhenti sejenak dan menikmati
+          pemandangan bisa memberikan pikiran yang lebih
+          tenang. Melihat kota dari kejauhan mengingatkan
+          saya bahwa dunia begitu luas, masih banyak
+          tempat untuk dijelajahi, dan masih banyak
+          impian yang ingin saya wujudkan.
+        </p>
+      </div>
+    </article>
+
+    <article class="story">
+      <img
+        src="1000224021.jpg"
+        alt="Kenangan bersama teman di tepi pantai"
+        loading="lazy"
+      >
+
+      <div class="story-content">
+        <div class="number">03 / PERSAHABATAN</div>
+
+        <h3>Tertawa Bersama, Bertumbuh Bersama</h3>
+
+        <p>
+          Perjalanan bersama teman selalu punya cerita
+          tersendiri. Ada percakapan, candaan, dan
+          pengalaman baru yang mungkin terlihat biasa
+          hari ini, tetapi akan terasa berharga ketika
+          dikenang nanti. Sebab, tempat yang indah
+          menjadi lebih berkesan saat dinikmati bersama.
+        </p>
+      </div>
+    </article>
+
+    <article class="story">
+      <img
+        src="1000220552.jpg"
+        alt="Menikmati suasana pegunungan"
+        loading="lazy"
+      >
+
+      <div class="story-content">
+        <div class="number">04 / PETUALANGAN</div>
+
+        <h3>Di Antara Gunung dan Impian</h3>
+
+        <p>
+          Berada di tengah alam membuat saya sadar
+          bahwa setiap perjalanan membutuhkan usaha.
+          Pemandangan pegunungan mengajarkan saya untuk
+          menikmati proses, menghargai setiap langkah,
+          dan tidak terburu-buru mencapai tujuan.
+          Karena terkadang, prosesnya sama berharganya
+          dengan hasil akhirnya.
+        </p>
+      </div>
+    </article>
+
+    <article class="story">
+      <img
+        src="1000220201.jpg"
+        alt="Momen perjalanan dengan sepeda motor"
+        loading="lazy"
+      >
+
+      <div class="story-content">
+        <div class="number">05 / JALANAN</div>
+
+        <h3>Perjalanan yang Membuka Cerita Baru</h3>
+
+        <p>
+          Setiap perjalanan di jalan memberikan
+          pengalaman berbeda. Ada pemandangan baru,
+          suasana yang tidak sama, dan kesempatan
+          untuk mengenal dunia lebih dekat.
+          Bagi saya, perjalanan bukan sekadar sampai
+          di tujuan, tetapi juga tentang menikmati
+          pengalaman dengan tetap mengutamakan
+          keselamatan.
+        </p>
+      </div>
+    </article>
+
+  </div>
+
+  <div class="quote">
+    "Kita mungkin tidak bisa mengulang waktu,
+    tetapi kita bisa menyimpan kenangan dan
+    menjadikannya bagian indah dari perjalanan hidup."
+  </div>
+</section>
+
+<section class="closing" id="pesan">
+  <div class="section-tag">CERITA INI TERUS BERLANJUT</div>
+
+  <h2>Masih Banyak Cerita di Depan</h2>
+
+  <p>
+    Lima foto, lima potongan kenangan, dan masih
+    banyak pengalaman yang belum tertulis.
+    Saya ingin terus belajar, mencoba hal baru,
+    menjelajahi tempat baru, membahagiakan keluarga,
+    serta menjadi pribadi yang lebih baik dari hari
+    ke hari.
+  </p>
+
+  <p style="margin-top: 20px;">
+    Ini bukan akhir cerita. Ini baru permulaan.
+  </p>
+
+  <a class="button" href="#home">Kembali ke Atas ↑</a>
+</section>
+
+</main>
+
+<footer>
+  © 2026 MyWeb — Sebuah Cerita, Banyak Kenangan.
+</footer>
+
+</body>
+</html>
